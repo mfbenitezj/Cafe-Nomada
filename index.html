@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3eb">
+  <meta name="description" content="Café Nómada: café de especialidad, desayunos tranquilos y repostería artesanal.">
+  <title>Café Nómada — Tu pausa favorita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">✳ Café recién molido · Repostería artesanal · Buenos días, sin prisa</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Café Nómada, inicio"><span class="brand-mark">cn.</span><span class="brand-copy"><strong>Café Nómada</strong><small>CAFÉ · PAN · PAUSA</small></span></a>
+    <nav class="desktop-nav" aria-label="Navegación principal"><a href="#carta">La carta</a><a href="#nosotros">Nuestra historia</a><a href="#visitanos">Encuéntranos</a></nav>
+    <div class="header-actions">
+      <button class="cart-button" id="open-cart" type="button" aria-label="Abrir carrito">♧ Tu pedido <span class="cart-count" id="cart-count">0</span></button>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden><a href="#carta">La carta</a><a href="#nosotros">Nuestra historia</a><a href="#visitanos">Encuéntranos</a></nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">TU RINCÓN DEL DÍA</p>
+        <h1>Hay días que<br>piden <em>otro café.</em></h1>
+        <p class="hero-description">Café de especialidad, bollería recién hecha y un rincón para bajar el ritmo. La pausa buena empieza aquí.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#carta">Descubrir la carta ↗</a><a class="text-link" href="#nosotros">Conócenos →</a></div>
+        <div class="hero-note"><span class="note-icon">☕</span><p><strong>Hecho con cariño</strong><br><small>Pequeños detalles, grandes pausas.</small></p></div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85" alt="Café servido sobre una mesa de madera" fetchpriority="high">
+        <div class="hero-sticker">UN POCO DE<br><strong>CALMA</strong><br>EN TU DÍA ✳</div>
+        <div class="photo-caption">— Tu mesa te está esperando</div>
+      </div>
+      <div class="hero-bottom"><span>01 / 03</span><span class="hero-bottom-line"></span><span>BUEN CAFÉ, MEJOR MOMENTO</span></div>
+    </section>
+
+    <section class="benefits" aria-label="Lo que nos hace especiales">
+      <div><span>✳</span><p><strong>Buen grano</strong><small>Seleccionado con mimo</small></p></div>
+      <div><span>♨</span><p><strong>Recién preparado</strong><small>Cada taza cuenta</small></p></div>
+      <div><span>♡</span><p><strong>Hecho aquí</strong><small>Repostería artesanal</small></p></div>
+      <div><span>☼</span><p><strong>Sin prisas</strong><small>Quédate un rato</small></p></div>
+    </section>
+
+    <section class="menu-section section-pad" id="carta">
+      <div class="section-heading"><div><p class="eyebrow">ALGO RICO TE ESPERA</p><h2>La carta <em>del momento.</em></h2></div><p class="section-intro">Para empezar la mañana, alargar la sobremesa o regalarte cinco minutos más.</p></div>
+      <div class="menu-toolbar">
+        <div class="filter-tabs" role="group" aria-label="Filtrar productos">
+          <button class="filter-tab is-active" type="button" data-filter="todos" aria-pressed="true">Todo</button>
+          <button class="filter-tab" type="button" data-filter="cafe" aria-pressed="false">Café</button>
+          <button class="filter-tab" type="button" data-filter="dulce" aria-pressed="false">Algo dulce</button>
+          <button class="filter-tab" type="button" data-filter="salado" aria-pressed="false">Salado</button>
+        </div><span class="menu-count" id="menu-count">6 cosas ricas</span>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite">
+        <article class="product-card" data-category="cafe" data-id="flat-white"><div class="product-image"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Café con leche en una taza" loading="lazy"><span class="product-tag">El favorito</span></div><div class="product-info"><div class="product-title-row"><h3>Flat white</h3><span class="product-price">2,80 €</span></div><p>Espresso intenso y leche sedosa, en su punto.</p><button class="add-button" data-add="flat-white" type="button">＋ Añadir al pedido</button></div></article>
+        <article class="product-card" data-category="dulce" data-id="croissant"><div class="product-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80" alt="Croissants dorados recién horneados" loading="lazy"><span class="product-tag tag-light">Recién hecho</span></div><div class="product-info"><div class="product-title-row"><h3>Croissant de mantequilla</h3><span class="product-price">2,20 €</span></div><p>Masa hojaldrada, dorada y crujiente por fuera.</p><button class="add-button" data-add="croissant" type="button">＋ Añadir al pedido</button></div></article>
+        <article class="product-card" data-category="cafe" data-id="iced-latte"><div class="product-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80" alt="Café frío con hielo y leche" loading="lazy"></div><div class="product-info"><div class="product-title-row"><h3>Iced latte</h3><span class="product-price">3,40 €</span></div><p>Espresso, leche fría y mucho hielo. Fresquito.</p><button class="add-button" data-add="iced-latte" type="button">＋ Añadir al pedido</button></div></article>
+        <article class="product-card" data-category="dulce" data-id="tarta"><div class="product-image"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Tarta casera de chocolate" loading="lazy"></div><div class="product-info"><div class="product-title-row"><h3>Tarta del día</h3><span class="product-price">4,20 €</span></div><p>Receta casera, ingredientes de temporada y cariño.</p><button class="add-button" data-add="tarta" type="button">＋ Añadir al pedido</button></div></article>
+        <article class="product-card" data-category="salado" data-id="tostada"><div class="product-image"><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=80" alt="Tostada de desayuno con ingredientes frescos" loading="lazy"><span class="product-tag">Para recargar</span></div><div class="product-info"><div class="product-title-row"><h3>Tostada de temporada</h3><span class="product-price">5,50 €</span></div><p>Pan de masa madre, aguacate y un toque cítrico.</p><button class="add-button" data-add="tostada" type="button">＋ Añadir al pedido</button></div></article>
+        <article class="product-card" data-category="salado" data-id="sandwich"><div class="product-image"><img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=900&q=80" alt="Sándwich preparado con ingredientes frescos" loading="lazy"></div><div class="product-info"><div class="product-title-row"><h3>Mini sándwich</h3><span class="product-price">4,80 €</span></div><p>Pan tierno, queso, tomate y hojas frescas.</p><button class="add-button" data-add="sandwich" type="button">＋ Añadir al pedido</button></div></article>
+      </div>
+      <p class="menu-disclaimer">Carta y precios ficticios, incluidos solo como ejemplo de diseño.</p>
+    </section>
+
+    <section class="story-section" id="nosotros">
+      <div class="story-image"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1400&q=85" alt="Interior cálido de una cafetería" loading="lazy"><span class="story-image-label">Un lugar para volver</span></div>
+      <div class="story-copy"><p class="eyebrow">UN CAFÉ CON HISTORIA</p><h2>Las mejores cosas<br>pasan <em>sin prisa.</em></h2><p>Nacimos con una idea sencilla: preparar un café excelente y crear un sitio donde apetezca quedarse. Elegimos buenos ingredientes, cuidamos cada taza y creemos que los pequeños rituales hacen los días más bonitos.</p><p>Ven con un libro, con amigos o contigo. La mesa está lista.</p><a class="button button-outline" href="#visitanos">Ven a conocernos ↗</a><div class="handwritten">Nos vemos<br>en la próxima taza ♡</div></div>
+    </section>
+
+    <section class="visit-section section-pad" id="visitanos">
+      <div class="visit-heading"><p class="eyebrow">POR AQUÍ ANDAMOS</p><h2>Tu próxima pausa<br>está <em>cerca.</em></h2><p>Estamos para servirte algo rico y sacarte una sonrisa.</p></div>
+      <div class="visit-details">
+        <div class="detail-row"><span class="detail-icon">⌖</span><div><strong>Ven a vernos</strong><p>Calle del Café, 12<br>Dénia, Alicante <small>(dirección de ejemplo)</small></p></div></div>
+        <div class="detail-row"><span class="detail-icon">◷</span><div><strong>Te esperamos</strong><p>Lun–Vie · 8:00–18:00<br>Sáb–Dom · 9:00–14:00</p></div></div>
+        <div class="detail-row"><span class="detail-icon">✉</span><div><strong>¿Tienes una pregunta?</strong><p><a href="mailto:hola@cafenomada.example">hola@cafenomada.example</a></p></div></div>
+        <a class="button button-dark visit-cta" href="#carta">Elegir algo rico ↗</a>
+      </div>
+    </section>
+    <section class="closing-banner"><p>Una buena pausa puede cambiarte el día.</p><span>☕</span></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#inicio"><span class="brand-mark">cn.</span><span class="brand-copy"><strong>Café Nómada</strong><small>CAFÉ · PAN · PAUSA</small></span></a><p>Hecho despacito, para disfrutarse mucho.</p><div class="footer-links"><a href="#carta">La carta</a><a href="#nosotros">Nosotros</a><a href="#visitanos">Contacto</a></div><small class="copyright">© <span id="year"></span> Café Nómada · Web de demostración</small></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">CASI LO TIENES</p><h2 id="cart-title">Tu pedido <span>✳</span></h2></div><button class="icon-button" id="close-cart" type="button" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cart-items"><div class="empty-cart"><span>☕</span><h3>Tu carrito está descansando.</h3><p>Añade algo rico de la carta y lo preparamos.</p><button class="button button-dark" id="back-to-menu" type="button">Ver la carta</button></div></div>
+    <div class="cart-footer" id="cart-footer" hidden><div class="cart-total"><span>Total estimado</span><strong id="cart-total">0,00 €</strong></div><p class="cart-note">Pedido de demostración: no se procesa ningún pago.</p><button class="button button-green" id="whatsapp-order" type="button">Preparar pedido en WhatsApp ↗</button></div>
+  </aside>
+</body>
+</html>
